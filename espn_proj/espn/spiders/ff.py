@@ -4,7 +4,7 @@ import urlparse
 from espn.items import EspnItem
 
 
-class FfSpider(scrapy.Spider):
+class EspnSpider(scrapy.Spider):
     name = "ff"
     allowed_domains = ["scores.espn.go.com"]
     start_urls = [
