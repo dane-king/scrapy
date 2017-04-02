@@ -9,8 +9,5 @@ import scrapy
 
 
 class CollegestatsItem(scrapy.Item):
-    year = scrapy.Field()
-    rank = scrapy.Field()
-    name = scrapy.Field()
-    pos = scrapy.Field()
+    data = scrapy.Field()
 

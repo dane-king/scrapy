@@ -8,4 +8,4 @@
 
 class CollegestatsPipeline(object):
     def process_item(self, item, spider):
-        return item
+        return '1,2,3'

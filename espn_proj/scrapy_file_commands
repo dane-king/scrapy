@@ -1,0 +1,15 @@
+//options -a <key=value>
+//startYear default is 2004
+//endYear default is 2016
+//maxPages default is 12
+//type required
+
+
+scrapy crawl stats --nolog -o stat-rcv.csv -t csv -a type='receiving' -a maxPages=60
+//remove quotes
+sed -i 's/\"//g' stat-rcv.csv
+sed -i '1d' stat-rcv.csv
+
+//add headers
+sed 's/^/YEAR,PLAYER,POS,TEAM,COMP,ATT,PCT,YDS,YDS/A,LONG,TD,INT,SACK,RAT/' stat-rcv.csv
+
